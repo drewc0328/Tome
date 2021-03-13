@@ -39,8 +39,6 @@ const getUsersTags = async (req, res, next) => {
       return next(new HttpError("Error getting the user's tags!", 500));
     }
 
-    console.log(results);
-
     res.status(201).send({ tags: results });
   });
 };

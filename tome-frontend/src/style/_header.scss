@@ -1,0 +1,37 @@
+.header {
+  height: 10vh;
+  background-color: $primary-color;
+}
+
+.header-main-grid {
+}
+
+.back-button-col {
+  margin-top: 0.5%;
+}
+
+.header-logo-col {
+  left: 5%;
+}
+
+.header-title-col {
+  margin-top: 0.6%;
+  right: 23%;
+}
+
+.header-title {
+  font-size: 1.8rem;
+}
+
+.logout-icon-col {
+  left: 18%;
+  margin-top: 0.5%;
+}
+
+.logout-icon {
+  font-size: 2.5rem;
+}
+
+.logout-icon:hover {
+  font-size: 2.7rem;
+}

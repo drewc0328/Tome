@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@600&display=swap");
+ion-title {
+  font-family: Arimo, sans-serif;
+}
+
+ion-text {
+  font-family: Arimo, sans-serif;
+}
+
+.display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-main-grid {
+  background-color: #bd49a4;
+}
+
+.back-button-col {
+  margin-top: 0.5%;
+}
+
+.header-logo-col {
+  left: 5%;
+}
+
+.header-title-col {
+  right: 32%;
+}
+
+.header-title {
+  font-size: 1.8rem;
+}
+
+.main-card {
+  margin-top: 1%;
+  height: 75vh;
+  width: 85vw;
+  overflow-y: scroll;
+}
+
+.main-card-header {
+  background-color: #bd49a4;
+}
+
+.main-card-header ion-title {
+  color: #f3f3f3;
+}
+
+.main-filter-item {
+  left: 8%;
+  width: 50%;
+}
+
+.main-search-item {
+  width: 80%;
+  left: 10%;
+}
+
+.seach-icon {
+  font-size: 1.2rem;
+  margin-right: 3%;
+}
+
+.command-item-card {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.command-title-col {
+  margin-left: 3.4%;
+}
+
+.command-title-text {
+  font-size: 1.4rem;
+  color: #444444;
+}
+
+.command-body-col {
+  margin-left: 4%;
+  width: 74vw;
+}
+
+.command-body-text {
+  font-size: 1rem;
+  color: #444444;
+}
+
+.command-copy-col {
+  margin-left: 2%;
+}
+
+.command-copy-icon {
+  font-size: 1.5rem;
+}
+
+.command-edit-col {
+  margin-top: 2%;
+}
+
+.command-edit-icon {
+  font-size: 2.2rem;
+}
+
+.tab-item {
+  margin-bottom: 10%;
+}
+
+.tab-list-div {
+  height: 80px;
+  overflow: auto;
+}
+/*# sourceMappingURL=style.css.map */

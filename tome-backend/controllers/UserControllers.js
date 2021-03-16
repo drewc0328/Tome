@@ -10,7 +10,7 @@ const login = async (req, res, next) => {
   try {
     value = await UserSchema.validateAsync({ username, password });
   } catch (err) {
-    return next(new Error(err));
+    return next(new Error("Username or password is an invalid input"));
   }
 
   if (value) {
@@ -49,7 +49,8 @@ const signup = async (req, res, next) => {
   try {
     value = await UserSchema.validateAsync({ username, password });
   } catch (err) {
-    return next(new Error(err));
+    console.log(err);
+    return next(new Error("Username or password is an invalid input"));
   }
 
   if (value) {
@@ -69,7 +70,13 @@ const signup = async (req, res, next) => {
 
   db.insertUser(username, bcryptHash, function (err, results) {
     if (err) {
-      return next(new HttpError("Server Error", 500));
+      let error;
+      if (err.code === "ER_DUP_ENTRY") {
+        error = "A user with that name already exists";
+      } else {
+        error = "Server Error";
+      }
+      return next(new HttpError(error, 500));
     }
 
     res.status(201).send({ user: results });

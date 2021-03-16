@@ -1,0 +1,30 @@
+@import "config";
+
+ion-title {
+  font-family: $font-stack;
+}
+
+ion-label {
+  font-family: $font-stack;
+}
+
+ion-input[type="text"] {
+  font-family: $font-stack;
+  font-size: 1.2rem;
+}
+
+ion-text {
+  font-family: $font-stack;
+}
+
+.display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@import "login";
+@import "header";
+@import "main";
+@import "command";
+@import "tabs";

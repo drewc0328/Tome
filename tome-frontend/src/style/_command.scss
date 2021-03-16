@@ -1,0 +1,89 @@
+.command-item-card {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.command-title-col {
+  margin-left: 3.4%;
+}
+
+.command-title-text {
+  font-size: 1.4rem;
+  color: $dark-color;
+}
+
+.command-body-col {
+  margin-left: 4%;
+  width: 74vw;
+}
+
+.command-body-text {
+  font-size: 1rem;
+  color: $dark-color;
+}
+
+.command-copy-col {
+  margin-left: 2%;
+}
+
+.command-copy-icon {
+  font-size: 1.5rem;
+}
+
+.command-copy-icon:hover {
+  color: $highlight-color;
+}
+
+.command-delete-col {
+  left: 15%;
+  margin-top: 2%;
+}
+
+.command-delete-icon {
+  font-size: 2.2rem;
+}
+
+.command-delete-icon:hover {
+  font-size: 2.5rem;
+}
+
+.command-edit-col {
+  left: 10%;
+  margin-top: 2%;
+}
+
+.command-edit-icon {
+  font-size: 2.2rem;
+}
+
+.command-edit-icon:hover {
+  font-size: 2.5rem;
+}
+
+// Create Command Component
+
+.create-command-main-title-row {
+  margin-top: 6%;
+  text-align: center;
+}
+
+.create-command-title-row {
+  margin-top: 5%;
+}
+
+.create-command-body-row {
+  margin-top: 8%;
+}
+
+.create-command-tag-row {
+  margin-top: 8%;
+}
+
+.create-command-filter-item {
+  width: 500px;
+}
+
+.create-command-button-row {
+  margin-left: 20%;
+  margin-top: 10%;
+}

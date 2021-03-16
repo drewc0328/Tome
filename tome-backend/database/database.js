@@ -8,7 +8,7 @@ const pool = mysql.createPool({
   user: process.env.user,
   password: process.env.password,
   database: process.env.db,
-  connectionLimit: 10,
+  connectionLimit: 100,
 });
 
 // Insert a user into tome_db, user table
@@ -25,6 +25,13 @@ exports.getUser = (username, callback) => {
 
 exports.postCommand = (uid, title, body, tag, callback) => {
   const sql = `INSERT INTO command(uid, title, body, tag) VALUES('${uid}', '${title}', '${body}', '${tag}')`;
+  GetConnection(sql, callback);
+};
+
+exports.searchCommand = (uid, search, callback) => {
+  console.log(uid);
+  console.log(search);
+  const sql = `SELECT * FROM command WHERE title LIKE '%${search}%' or body LIKE '%${search}%' and uid=${uid};`;
   GetConnection(sql, callback);
 };
 
@@ -57,18 +64,19 @@ const GetConnection = (sql, callback) => {
   pool.getConnection((err, connection) => {
     if (err) {
       console.log(err);
-      callback(true);
+      callback(err);
       return;
     }
 
     connection.query(sql, (err, results) => {
+      connection.release();
       if (err) {
         console.log(err);
-        callback(true);
+        callback(err);
         return;
       }
 
-      callback(false, results);
+      callback("", results);
     });
   });
 };

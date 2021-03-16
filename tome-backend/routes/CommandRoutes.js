@@ -11,6 +11,7 @@ router.post("/tags", CommandControllers.getUsersTags);
 //CRUD operators on user commands
 
 router.post("/", CommandControllers.postCommand);
+router.post("/search", CommandControllers.searchCommand);
 router.put("/", CommandControllers.putCommand);
 router.delete("/", CommandControllers.deleteCommand);
 

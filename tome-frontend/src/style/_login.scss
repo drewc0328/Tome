@@ -1,0 +1,58 @@
+.login-page {
+  background: rgb(230, 230, 230);
+}
+
+.login-card {
+  width: 35vw;
+  height: 70vh;
+  background: $primary-color;
+  border-radius: 2rem;
+  z-index: 3;
+  backdrop-filter: blur(2rem);
+}
+
+.login-title {
+  margin-top: 6%;
+  font-size: 2.5rem;
+  text-align: center;
+  color: $dark-color;
+}
+
+.login-username-row {
+  margin-top: 12%;
+  margin-left: 9%;
+  width: 80%;
+}
+
+.login-password-row {
+  margin-top: 12%;
+  margin-left: 9%;
+  width: 80%;
+}
+
+.login-button-row {
+  margin-top: 15%;
+  margin-left: 20%;
+}
+
+.error-text-white {
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+}
+
+.error-text {
+  color: rgb(214, 65, 65);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.error-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-div {
+  height: 100vh;
+  width: auto;
+}

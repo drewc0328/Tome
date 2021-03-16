@@ -71,6 +71,20 @@ const postCommand = async (req, res, next) => {
   });
 };
 
+const searchCommand = async (req, res, next) => {
+  const { uid, search } = req.body;
+
+  db.searchCommand(uid, search, (err, results) => {
+    if (err) {
+      return next(new HttpError("Error searching for the command", 500));
+    }
+
+    console.log(results);
+
+    res.status(201).send({ commands: results });
+  });
+};
+
 const putCommand = async (req, res, next) => {
   const { id, title, body, tag } = req.body;
 
@@ -103,5 +117,6 @@ exports.getCommandByID = getCommandByID;
 exports.getCommandByTag = getCommandByTag;
 exports.getUsersTags = getUsersTags;
 exports.postCommand = postCommand;
+exports.searchCommand = searchCommand;
 exports.putCommand = putCommand;
 exports.deleteCommand = deleteCommand;

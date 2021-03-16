@@ -1,0 +1,29 @@
+.main-card {
+  margin-top: 3%;
+  height: 75vh;
+  width: 85vw;
+  overflow-y: scroll;
+}
+
+.main-card-header {
+  background-color: $primary-color;
+}
+
+.main-card-header ion-title {
+  color: $dark-color;
+}
+
+.main-filter-item {
+  left: 8%;
+  width: 50%;
+}
+
+.main-search-item {
+  width: 80%;
+  left: 10%;
+}
+
+.seach-icon {
+  font-size: 1.2rem;
+  margin-right: 3%;
+}
